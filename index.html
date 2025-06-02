@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Purrductivity</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <script src="https://kit.fontawesome.com/46dbb1a64b.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+</head>
+<body>
+<main>
+    <!-- Timer UI -->
+    <div class="timer">
+      <div id="clock">00:00:00</div>
+      <div class="controls">
+        <button id="toggleBtn"><i class="fa-solid fa-play"></i></button>
+        <button id="restartBtn"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+      </div>
+    </div>
+
+    <!-- Settings Buttion -->
+    <button id="openSettingsBtn"><i class="fa-solid fa-gear"></i></button>
+
+    <!-- Settings Overlay -->
+    <div id="settingsModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeSettingsBtn" class="close"><i class="fa-solid fa-xmark"></i></span>
+        <h2>Settings</h2>
+        
+        <label for="intervalInput">Spawn a cat every:</label>
+        <input type="number" id="intervalInput" value="30" min="1" />
+        <select id="intervalUnit">
+          <option value="minutes">minutes</option>
+          <option value="seconds">seconds</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="catContainer"></div>
+  </main>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
