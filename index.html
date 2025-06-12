@@ -20,6 +20,7 @@
 
 </head>
 <body>
+  <audio id="meowSound" src="sounds/meow.mp3" preload="auto"></audio>
 <main>
     <!-- Timer UI -->
     <div class="timer">
@@ -40,7 +41,7 @@
         <h2>Settings</h2>
         
         <label for="intervalInput">Spawn a cat every:</label>
-        <input type="number" id="intervalInput" value="30" min="1" />
+        <input type="number" id="intervalInput" value="1" min="1" />
         <select id="intervalUnit">
           <option value="minutes">minutes</option>
           <option value="seconds">seconds</option>

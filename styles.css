@@ -1,11 +1,25 @@
 html {
     background-color: rgb(189, 205, 255);
+      height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
     font-family: "Manrope", sans-serif;
     font-weight: 400;
     font-size: 1em;
+      height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  padding: 25px; /* consistent spacing all around */
+  box-sizing: border-box;
 }
 
 #clock {
@@ -28,32 +42,33 @@ body {
     font-size: 3em;
     backdrop-filter: blur(10px);
     filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.20));
+    z-index: 10;
+  pointer-events: auto;
 }
 
 #catContainer {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    border: 1px solid #ccc;
-    overflow: hidden;
-    margin-top: 50px;
+  flex-grow: 1;
+  width: 100%;
+  /* border: 1px solid #7d3434; */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;  
 }
 
 .cat {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    transition: transform 0.3s ease;
-    user-select: none;
-    pointer-events: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transition: transform 0.3s ease;
+  user-select: none;
+  cursor: grab;
+  background: none !important;
 }
 
-/* .draggable {
-    width: 300px;
-    height: 275px;
-    padding: 0.5em;
-    border: none;
-} */
+.cat.ui-widget-content {
+  border: none !important;
+  background: none !important;
+}
 
 .modal {
   display: flex;
@@ -104,6 +119,8 @@ h2 {
   background-color: rgb(240, 240, 240, 0.75);
   backdrop-filter: blur(10px);
   filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.20));
+  z-index: 10;
+  pointer-events: auto;
 }
 
 #toggleBtn {
